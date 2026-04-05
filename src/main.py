@@ -39,12 +39,8 @@ def main():
         template_content = open(template_path).read()
         html_string = conversion.markdown_to_html_node(md_content).to_html()
         title = conversion.extract_title(md_content)
-        
-        # Extract directory name from the source path
         dir_path = os.path.dirname(from_path)
         path_parts = dir_path.split('/')[1:]  # Remove 'content' prefix
-        
-        # Replace active class for matching directory
         if path_parts and path_parts[0]:
             # Check each part of the path for matching nav links
             for i, part in enumerate(path_parts):
@@ -53,7 +49,6 @@ def main():
                     replacement = f'<li><a class="active" href="/{part}">'
                     template_content = re.sub(pattern, replacement, 
                                             template_content)
-        
         res = template_content.replace("{{ Title }}", title).replace(
             "{{ Content }}", html_string).replace('href="/', 
             f'href="{basepath}').replace('src="/', f'src="{basepath}')
@@ -77,6 +72,6 @@ def main():
 
     public("static/")
     generate_page_rec("content/", "template.html", "docs/", basepath)
-    rss.generate_rss_feed("content/", "docs/index.xml", "https://rmmueller.com", 
-                 "Mueller Blog", "Articles")
+    rss.generate_rss_feed("content/", "docs/index.xml", "https://xn--matthewmller-klb.com/", 
+                 "Blog", "Articles")
 main()

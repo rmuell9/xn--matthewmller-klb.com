@@ -1,15 +1,17 @@
 # Now
 
-##### What i'm working on now
+##### What I'm personally working on:
 
-- Main areas of focus: general relativity, topological manifolds, algebraic topology, and mereology
+- Mathematics (manifold theory, PDEs, geometry and topology)
+- Homelab media server and mastering computer networking and security
+- Renouncing BJJ and training more kickboxing; incorporating stability work to become more of an "athlete"
 
-- Understanding language design by [building interprets and compilers](https://github.com/rmuell9/goInterpreter)
+#### Website development:
 
-- Machine learning: [building an LLM from scratch](https://github.com/rmuell9/buildLLM) and mastering XGBoost on Kaggle
-
+- Incorporating LaTeX formatting
+- Publishing some actual content
 
 
 {{< postfoot >}}
-Updated on 1-16-26
+Updated on 4-05-26
 {{</ postfoot >}}
